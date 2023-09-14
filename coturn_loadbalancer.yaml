@@ -1,0 +1,29 @@
+logLevel: debug  ## debug/info/warning
+
+turn:
+  addressMapping:
+    # Public-IP/Domain: Private-IP/Domain
+    coturn-01.example.com: 192.168.100.10
+    coturn-02.example.com: 192.168.100.20
+
+webApi:
+  host: 127.0.0.1
+  port: 8080
+  threads: 5
+
+healthCheck:
+  intervalSeconds: 15
+  timeoutSeconds: 5
+  successThreshold: 3
+  failureThreshold: 3
+  port: 5349
+
+loadBalancer:
+  algorithm: metrics  ## metrics/random
+  intervalMinutes: 5
+  durationMinutes: 5
+  timeoutSeconds: 5
+  prometheus:
+    endpoint: prometheus.example.com
+    port: 80
+    query: 'sum(node_netstat_Tcp_CurrEstab{ip=~"%s"}) by(ip)'
