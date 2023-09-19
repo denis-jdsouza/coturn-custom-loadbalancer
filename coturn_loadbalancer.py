@@ -9,8 +9,6 @@ from random import choice
 from statistics import mean
 from time import sleep, time
 from threading import Thread
-
-from aiohttp import ClientSession, ClientTimeout
 from flask import Flask, jsonify
 import requests
 from waitress import serve
