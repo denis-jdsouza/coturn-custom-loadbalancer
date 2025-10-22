@@ -68,5 +68,5 @@ GET http://localhost:8080/coturn
 }
 ```
 
-## License
-Code released under the [MIT License](https://opensource.org/licenses/MIT)
+## ⚖️ License
+This project is licensed under the [MIT License](LICENSE) - see the file for details.
